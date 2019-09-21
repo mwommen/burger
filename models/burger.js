@@ -40,7 +40,6 @@ const orm = require("../config/orm.js");
 
 
 
-////////////////////////////////////////////// /*Model*/ //////////////////////////////////////////////////////////
 
 const burger = {
 
@@ -53,14 +52,10 @@ const burger = {
   },
 
   // The variables cols and vals are arrays.
-  insertOne : (cols, vals, callback) => {
+  insertOne : function( vals, callback){
 
     // Execute orm Function to Post Data into Database
-    orm.insertOne("burgers", cols, vals, (result)=>{
-      console.log("Executing Insert One Model");
-      callback(result);
-    });
-
+    orm.insertOne("burgers", ["burger_name", "devoured"], [vals, false],callback)
   },
 
   updateOne : (cols, vals, condition, callback) =>{
