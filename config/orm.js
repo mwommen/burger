@@ -3,18 +3,21 @@ let connection = require("../config/connection.js");
 let tableName = "burgers";
 
 
-let orm {
-    selectAll : (tableName,callback) => {
+const orm =  {
+    selectAll : (tableName, cb) => {
         let queryStatement  = `SELECT * FROM ${tableName};`;
-
-        connection.query(queryStatement, err, result) => {
+        connection.query(queryStatement, (err, result) => {
             if(err) throw err;
-            callback(result)
-            
-        }
-
-    
+            cb(result)
+        });
 },
+};
+
+module.exports = orm;
+
+
+//Create methods for selectAll(), insertOne(), updateOne(), then export the orm object in module.exports.
+
 
 
 
