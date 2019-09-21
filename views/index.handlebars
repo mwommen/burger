@@ -1,17 +1,10 @@
-{{!-- 
-{{#each burgers}}
-<div>{{burger_name}}</div>
-{{/each}} --}}
-
 
 <div id ="headerSection">
   <h2>Eat Da Burger</h2>
 </div>
 
-<!-- Middle Section -->
 <div id="middleSection">
 
-  <!-- Left  -->
   <div class="leftMiddle">
     <div class="uneaten center">
       {{#each burger}}
@@ -22,7 +15,6 @@
     </div>
   </div>
 
-  <!-- Center -->
   <div class="centerMiddle">
     <div class="center">
       <input id="burgerName" type="text" placeholder="Name of Your Burger" data-eaten="0">
@@ -30,7 +22,6 @@
     </div>
   </div>
 
-  <!-- Right -->
   <div class="rightMiddle">
     <div class="eaten center">
       {{#each burger}}

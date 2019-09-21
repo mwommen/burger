@@ -30,42 +30,4 @@ router.post('/burger/eat/:id', function (req, res) {
     res.redirect('/index');
   });
 });
-
-
 module.exports = router;
-
-
-
-
-
-
-
-
-
-
-// var express =  require('express');
-// var burgerRouter = express.Router();
-// var Burger = require('../models/burger');
-
-// burgerRouter.get('/', function(req, res){
-//     Burger.selectAll(function(results){
-//         const burgerData = {
-//             burgers: results
-//         }
-//         res.render('index', burgerData);
-//     })
-// });
-
-// burgerRouter.post('/burgers/create', function(req,res){
-// Burger.insertOne(req.body.burger_name, function() {
-//     res.redirect('/index');
-// })
-
-// burgerRouter.post('burger/eat/:id', function(req,res){
-//     Burger.updateOne(req.params.id, function() {
-//         res.redirect('/index')
-//     });
-// });
-
-
-// module.exports = router;

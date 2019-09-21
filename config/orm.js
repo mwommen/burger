@@ -53,30 +53,3 @@ const orm = {
   
   }
   module.exports = orm;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-// const orm =  {
-//     selectAll : (tableName, cb) => {
-//         let queryStatement  = `SELECT * FROM ${tableName};`;
-//         connection.query(queryStatement, (err, result) => {
-//             if(err) throw err;
-//             cb(result)
-//         });
-// },
-// };
-
-// module.exports = orm;
